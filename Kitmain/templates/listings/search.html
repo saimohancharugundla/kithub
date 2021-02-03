@@ -1,0 +1,82 @@
+{% load humanize %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>kithob</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/product_style.css' %}"/>
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-container">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+                </button>
+                <div class="webname-style">kit<span>hob</span></div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                <li ><a href="{% url 'home' %}">Home</a></li>
+                <li class="active"><a href="{% url 'listings' %}">Products</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Stores</a></li>
+                <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li><a href="user_profile.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+    <!--listings-->
+    <div class="tab-content">
+                    <div class="row">
+                    <!-- **********  CSE Text books section  ************* -->
+                        {% if query_set %}
+                            {% for listing in query_set %}
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class=" col-md-4 col-lg-3 ">
+                                                <div class="thumbnail book-card-styling" >
+                                                    <div>
+                                                        <h3>{{listing.title}}</34>
+                                                    </div>  
+                                                </div>
+                                                <img src="{{listing.photo_main.url}}" alt="..." class="book-card-image">
+                                                <p> <br> {{listing.description}}</p>
+                                                <p><strong>Subject name : </strong>{{listing.title}}</p>
+                                                <p><strong>Author : </strong> </p>
+                                                            <p><strong>Category : </strong>{{listing.category}}</strong></p>
+                                                            <p><strong>Price : </strong>{{listing.price|intcomma}}</p>
+                                                            <p><strong>Seller : </strong>{{listing.owner.first_name}}</p>
+                                                            <p><strong>Address : </strong>{{listing.owner.address}}</p>
+                                                            <p><strong>Seller Email Id : </strong>{{listing.owner.email}}</p>
+                                                            <p><strong>Listed On : </strong>{{listing.list_date|timesince}}</p>
+                                                        
+                                                <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                            
+                            {% endfor %}
+                            {% else %}
+                            <div class="col-md-12">
+                                <p>Currently no products are in sale</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div> 

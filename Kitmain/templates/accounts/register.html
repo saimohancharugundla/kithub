@@ -1,0 +1,147 @@
+{% load static %}
+<html>
+    <head>
+        
+        <title>kithob</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/product_style.css' %}"/>    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- BOOTSTRAP version 4.0 -->
+    </head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <div class="webname-style">kit<span>hob</span></div>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'products' %}">Products</a></li>
+              <li><a href="#">Deals</a></li>
+              <li><a href="#">Stores</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href=""><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <hr>
+    {% include 'partials/alerts.html' %}
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-3"><!--left col-->
+                
+
+                <div class="text-center">
+                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar" height="200px" width="200px">
+                    <h6>Upload a different photo...</h6>
+                    <input type="file" class="text-center center-block file-upload">
+                </div></hr><br>
+                <ul class="list-group">
+                    <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+                    
+            </div><!--/col-3-->
+            <div class="col-sm-9">
+                <h2>Your details</h2>
+
+                
+            <div class="tab-content">
+                <div class="tab-pane active" id="user-profile">
+                    <hr>
+                    <form class="form" action="{% url 'register' %}" method="POST" id="registrationForm">
+                    {% csrf_token %}
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="first_name"><h4>First name</h4></label>
+                                <input type="text" class="form-control" name="first_name" required id="first_name" placeholder="first name" title="enter your first name if any.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="last_name"><h4>Last name</h4></label>
+                                <input type="text" class="form-control" name="last_name" required id="last_name" placeholder="last name" title="enter your last name if any.">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="username"><h4>Username</h4></label>
+                                <input type="text" class="form-control" name="username" required id="username" placeholder="Username" title="Username">
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="phone"><h4>Phone</h4></label>
+                                <input type="tel" class="form-control" name="phone" required id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="email"><h4>Email</h4></label>
+                                <input type="email" class="form-control" name="email" required id="email" placeholder="idnumber@rguktong.ac.in" title="enter your email.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="uid"><h4>College ID</h4></label>
+                                <input type="text" name="uid" class="form-control" id="uid" placeholder="University ID" title="University ID">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="password"><h4>Password</h4></label>
+                                <input type="password" class="form-control" required name="password" id="password" placeholder="password" title="enter your password.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="cpassword"><h4>Confirm Password</h4></label>
+                                <input type="password" class="form-control" required name="cpassword" id="cpassword" placeholder="confirm your password" title="Confirm your password.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                    <br>
+                                    <button class="btn btn-lg btn-success" style="margin-left:40%;margin-right:40%;" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                                </div>
+                        </div>
+                    </form>
+                
+                <hr>
+                
+                </div><!--/tab-pane-->
+                
+                
+            </div><!--/tab-content-->
+
+            </div><!--/col-9-->
+        </div><!--/row-->
+    </div>    
+    
+</body>
+</html>
+                                                      

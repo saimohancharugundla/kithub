@@ -1,0 +1,236 @@
+<html>
+    <head>
+        
+        <title>kithob</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/home_style.css"/>    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- BOOTSTRAP version 4.1 -->
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- BOOTSTRAP version 4.0 -->
+    </head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <div class="webname-style">kit<span>hob</span></div>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="home_index.html">Home</a></li>
+              <li><a href="product_index.html">Products</a></li>
+              <li><a href="#">Deals</a></li>
+              <li><a href="#">Stores</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="user_profile.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <hr>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-3"><!--left col-->
+                
+
+                <div class="text-center">
+                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                    <h6>Upload a different photo...</h6>
+                    <input type="file" class="text-center center-block file-upload">
+                </div></hr><br>
+                <ul class="list-group">
+                    <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong>deals</strong></span> 125</li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong>ordered books</strong></span> 13</li>
+                
+                
+            
+            
+            </div><!--/col-3-->
+            <div class="col-sm-9">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#user-profile">Your details</a></li>
+                    <li><a data-toggle="tab" href="#delivery">Delivery progress</a></li>
+                    <li><a data-toggle="tab" href="#edit-address">adress book</a></li>
+                </ul>
+
+                
+            <div class="tab-content">
+                <div class="tab-pane active" id="user-profile">
+                    <hr>
+                    <form class="form" action="##" method="post" id="registrationForm">
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="first_name"><h4>First name</h4></label>
+                                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="last_name"><h4>Last name</h4></label>
+                                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="id_number"><h4>Last name</h4></label>
+                                <input type="text" class="form-control" name="id_number" id="id_number" placeholder="ID number" title="enter your last name if any.">
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="phone"><h4>Phone</h4></label>
+                                <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="email"><h4>Email</h4></label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="idnumber@rguktong.ac.in" title="enter your email.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="location"><h4>Location</h4></label>
+                                <input type="text" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="password"><h4>Password</h4></label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="conform_password"><h4>Verify</h4></label>
+                                <input type="password" class="form-control" name="conform_password" id="conform_password" placeholder="conform your password" title="enter your password2.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                    <br>
+                                    <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                                    <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                                </div>
+                        </div>
+                    </form>
+                
+                <hr>
+                
+                </div><!--/tab-pane-->
+                <div class="tab-pane" id="delivery">
+                    Under construction                
+                </div><!--/tab-pane-->
+                <div class="tab-pane" id="edit-address">
+                        
+                    
+                    <hr>
+                    <form class="form" action="##" method="post" id="registrationForm">
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="id_number"><h4>ID number</h4></label>
+                                <input type="text" class="form-control" name="id_number" id="id_number" placeholder="id_number" title="enter your id number if any.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="hostel_name"><h4>Hostel name</h4></label>
+                                <input type="text" class="form-control" name="hostel_name" id="hostel_name" placeholder="hostel name" title="enter your hostel if any.">
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="room_number"><h4>Room number</h4></label>
+                                <input type="text" class="form-control" name="room_number" id="room_number" placeholder="enter room number" title="enter your room number if any.">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="email"><h4>E-mail</h4></label>
+                                <input type="email" class="form-control" id="email" placeholder="idnumber@rguktong.ac.in" title="enter a id number if any.">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            
+                            <div class="col-xs-6">
+                                <label for="phone"><h4>Phone number</h4></label>
+                                <input type="text" class="form-control" name="phone" id="phone" placeholder="XXXXXXXXXX" title="enter your phone number if any.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                    <br>
+                                    
+                                    <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                                </div>
+                        </div>
+                    </form>                
+                </div><!--/tab-pane-->
+            </div><!--/tab-content-->
+
+            </div><!--/col-9-->
+        </div><!--/row-->
+    </div>    
+    <script>
+        $(document).ready(function() {
+
+    
+            var readURL = function(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.avatar').attr('src', e.target.result);
+                    }
+            
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            
+
+            $(".file-upload").on('change', function(){
+                readURL(this);
+            });
+        });
+    </script>
+</body>
+</html>
+                                                      
